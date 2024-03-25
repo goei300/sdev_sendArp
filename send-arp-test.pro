@@ -4,15 +4,23 @@ CONFIG -= app_bundle
 CONFIG -= qt
 LIBS += -lpcap
 
+INCLUDEPATH += ./include
+
+DESTDIR = ./out
+
+OBJECTS_DIR = ./out/obj
+
 SOURCES += \
-	arphdr.cpp \
-	ethhdr.cpp \
-	ip.cpp \
-	mac.cpp \
-	main.cpp
+    src/arphdr.cpp \
+    src/ethhdr.cpp \
+    src/ip.cpp \
+    src/mac.cpp \
+    src/getPacket.cpp \
+    src/main.cpp
 
 HEADERS += \
-	arphdr.h \
-	ethhdr.h \
-	ip.h \
-	mac.h
+    include/arphdr.h \
+    include/ethhdr.h \
+    include/ip.h \
+    include/getPacket.h \
+    include/mac.h
